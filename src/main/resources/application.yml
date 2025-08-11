@@ -1,0 +1,29 @@
+server:
+  port: 5000
+
+
+spring:
+  application:
+    name: Prioriti
+# local
+#  datasource:
+#    password: root
+#    url: jdbc:mysql://localhost:3306/prioriti_db
+#    username: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# aws
+  datasource:
+      password: Mypassword
+      url: jdbc:mysql://prioriti.cl2g0skwuiih.ap-south-1.rds.amazonaws.com:3306/prioritidb
+      username: admin
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+secretjwtString: f56d5524f9d12ebb3560ef1611e654c7a820de29
+
+
+
