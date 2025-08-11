@@ -1,13 +1,30 @@
 version: 0.2
+
 phases:
+  install:
+    runtime-versions:
+      java: corretto21
+    commands:
+      - echo Installing Maven...
+      - yum install -y maven
+      - mvn -version
+
+  pre_build:
+    commands:
+      - echo Cleaning and preparing the build environment...
+      - mvn clean
+
   build:
     commands:
-      - echo Packaging JAR file...
-      - mvn clean package
+      - echo Building the JAR file...
+      - mvn package -DskipTests
+
   post_build:
     commands:
-      - echo Build complete.
+      - echo Build completed on `date`
+      - ls -l target/
+
 artifacts:
   files:
-    - target/Prioriti.jar
+    - target/*.jar
   discard-paths: yes
