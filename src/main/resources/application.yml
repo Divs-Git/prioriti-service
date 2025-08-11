@@ -15,7 +15,7 @@ spring:
 # aws
   datasource:
       password: Mypassword
-      url: jdbc:mysql://prioriti.cl2g0skwuiih.ap-south-1.rds.amazonaws.com:3306/prioritidb
+      url: jdbc:mysql://prioritidb.cepcogu8o86o.us-east-1.rds.amazonaws.com:3306/prioritidb
       username: admin
       driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
